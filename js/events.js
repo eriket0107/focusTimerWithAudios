@@ -8,8 +8,6 @@ import {
   buttonSoundRain,
   buttonSoundCoffeeShop,
   buttonSoundFireplace,
-  minutesDisplay,
-  secondsDisplay,
 } from "./elements.js"
 import {sounds} from "./sounds.js"
 
@@ -20,6 +18,7 @@ export default function Events({
     buttonPlay.addEventListener('click', ()=>{
     controls.play()
     timer.countdown()
+    sounds.buttonPressAudio.play()
   })
 
   buttonPause.addEventListener('click', ()=>{
